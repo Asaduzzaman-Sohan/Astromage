@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/peakpx_2"
+            android:scaleType="centerCrop"
+            android:alpha=".9"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/displayImg"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="15dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            app:layout_constraintTop_toTopOf="@id/containerLayout"
+            app:layout_constraintStart_toStartOf="@id/containerLayout"
+            app:layout_constraintEnd_toEndOf="@id/containerLayout">
+
+            <ImageView
+                android:id="@+id/defaultImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/card_bg"
+                android:scaleType="centerCrop"
+                />
+
+            <ImageView
+                android:id="@+id/galaxyImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/galaxy"
+                android:scaleType="centerCrop"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/oumuamuaImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/oumuamua"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/clusterImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cluster"
+                android:scaleType="centerCrop"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/black_holeImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/blackhole"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/neutron_starImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/neutron_star_1"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/pulsarImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/pulsar"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/gravity_waveImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/gravity_wave"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/rogue_planetImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/rogue_planet_2"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/quasarImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/quasar"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                />
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/displayImg"
+            app:layout_constraintStart_toStartOf="@id/containerLayout"
+            app:layout_constraintEnd_toEndOf="@id/containerLayout"
+            app:layout_constraintBottom_toBottomOf="@id/containerLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/galaxyBtn"
+                        android:layout_width="110dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/btn_bg"
+                        android:fontFamily="@font/cambo"
+                        android:text="Galaxy"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                        android:textColor="#E0FDF6"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/oumuamuaBtn"
+                        android:layout_width="110dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/btn_bg"
+                        android:fontFamily="@font/cambo"
+                        android:text="Oumuamua"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="5dp"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                        android:textColor="#E0FDF6"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/clusterBtn"
+                        android:layout_width="110dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/btn_bg"
+                        android:fontFamily="@font/cambo"
+                        android:text="Cluster"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="5dp"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                        android:textColor="#E0FDF6"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/black_holeBtn"
+                        android:layout_width="110dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/btn_bg"
+                        android:fontFamily="@font/cambo"
+                        android:text="Blackhole"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                        android:textColor="#E0FDF6"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/neutron_starBtn"
+                        android:layout_width="110dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/btn_bg"
+                        android:fontFamily="@font/cambo"
+                        android:text="Neutron Star"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="5dp"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                        android:textColor="#E0FDF6"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/pulsarBtn"
+                        android:layout_width="110dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/btn_bg"
+                        android:fontFamily="@font/cambo"
+                        android:text="Pulsar"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="5dp"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                        android:textColor="#E0FDF6"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/gravity_waveBtn"
+                        android:layout_width="110dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/btn_bg"
+                        android:fontFamily="@font/cambo"
+                        android:text="Gravity Wave"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                        android:textColor="#E0FDF6"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/rogue_planetBtn"
+                        android:layout_width="110dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/btn_bg"
+                        android:fontFamily="@font/cambo"
+                        android:text="Rogue Planet"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                        android:textColor="#E0FDF6"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/quasarBtn"
+                        android:layout_width="110dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/btn_bg"
+                        android:fontFamily="@font/cambo"
+                        android:text="Quasars"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="5dp"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                        android:textColor="#E0FDF6"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/defaultBtn"
+                    android:layout_width="220dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/btn_bg"
+                    android:fontFamily="@font/cambo"
+                    android:text="Default"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                    android:textColor="#E0FDF6"
+                    android:textStyle="bold" />
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
